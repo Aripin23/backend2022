@@ -39,3 +39,12 @@ Route::get('/student', [StudentController::class, 'index']);
 #menambahkan resorce student
 #methode post
 Route::post('/student', [StudentController::class, 'store']);
+
+#update resource student
+#methode put
+Route::put('/student/{id}', [StudentController::class, 'update']);
+
+#delete resource student
+#methode delete
+Route::delete('/student/{id}', [StudentController::class, 'delete']);
+
