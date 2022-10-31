@@ -39,3 +39,8 @@ Route::get('/student', [StudentController::class, 'index']);
 #menambahkan resorce student
 #methode post
 Route::post('/student', [StudentController::class, 'store']);
+
+#update data student dengan id
+#methode put
+Route::put('/student/{id}', [StudentController::class, 'update']);
+
