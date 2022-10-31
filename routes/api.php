@@ -44,7 +44,6 @@ Route::post('/student', [StudentController::class, 'store']);
 #methode put
 Route::put('/student/{id}', [StudentController::class, 'update']);
 
-#delete resource student
+#delete data student dengan id
 #methode delete
-Route::delete('/student/{id}', [StudentController::class, 'delete']);
-
+Route::delete('/student/{id}', [StudentController::class, 'destroy']);
