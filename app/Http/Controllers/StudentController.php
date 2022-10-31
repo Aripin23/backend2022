@@ -57,4 +57,21 @@ class StudentController extends Controller
         return response()->json($data, 201);
 
     }
+
+    public function update(Request $request, $id)
+    {
+        $student = Student::findOrFail($id);
+        $student->update($request->only("nama", "nim", "email", "jurusan"));
+        return response()->json(["data" =>[ 
+            "Student data has successfully updates" => true
+        ]]);
+    }
+
+    public function destroy($id)
+    {
+        Student::findOrFail($id)->delete();
+        return response()->json(["data" => [
+            "Student data has successfully delete" => true
+        ]]);
+    }
 }
