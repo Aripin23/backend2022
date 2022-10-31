@@ -66,4 +66,12 @@ class StudentController extends Controller
             "Student data has successfully updates" => true
         ]]);
     }
+
+    public function destroy($id)
+    {
+        Student::findOrFail($id)->delete();
+        return response()->json(["data" => [
+            "Student data has successfully delete" => true
+        ]]);
+    }
 }
