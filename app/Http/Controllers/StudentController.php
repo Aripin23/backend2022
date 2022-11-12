@@ -118,7 +118,7 @@ class StudentController extends Controller
         $delete->delete();
 
         $message = [
-            'message' => 'Delete data studenthas successfully',
+            'message' => 'Delete data student has successfully',
             'data' => $delete
         ];
 
